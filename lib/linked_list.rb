@@ -72,12 +72,30 @@ class LinkedList
 
     current_node.value
   end
+
+  # removes the last element from the list
+  def pop
+    return nil if @size.zero?
+
+    if @size == 1
+      @head = nil
+    else
+      current_node = @head
+
+      current_node = current_node.next unless current_node.next.next.nil?
+      current_node.next = nil
+    end
+
+    @size -= 1
+    nil
+  end
 end
 
 list = LinkedList.new
-# list.append(10)
-# list.append(20)
-# list.append(30)
+list.append(10)
+list.append(20)
+list.append(30)
+
+list.pop
 
 puts list
-puts list.at(0)
