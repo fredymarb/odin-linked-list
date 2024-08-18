@@ -47,12 +47,21 @@ class LinkedList
   def head
     @head.value
   end
+
+  # returns the last node of the list
+  def tail
+    current_node = @head
+
+    current_node = current_node.next until current_node.next.nil?
+    current_node.value
+  end
 end
 
 list = LinkedList.new
 puts list
-list.prepend(10)
-list.prepend(20)
-list.prepend(30)
+list.append(10)
+list.append(20)
+list.append(30)
 
-puts list.head
+puts list
+puts list.tail
