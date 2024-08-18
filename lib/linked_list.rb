@@ -28,11 +28,20 @@ class LinkedList
     current_node = current_node.next until current_node.next.nil?
     current_node.next = new_node
   end
+
+  def prepend(value)
+    new_node = Node.new(value)
+
+    new_node.next = @head
+    @head = new_node
+
+    @size += 1
+  end
 end
 
 list = LinkedList.new
 puts list
-list.append(10)
-list.append(20)
-list.append(30)
+list.prepend(10)
+list.prepend(20)
+list.prepend(30)
 puts list
