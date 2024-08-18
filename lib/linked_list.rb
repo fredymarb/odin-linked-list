@@ -102,16 +102,32 @@ class LinkedList
 
     false
   end
+
+  # returns the index of the node containing value,
+  # or nil if not found.
+  def find(value)
+    current_node = @head
+    index = 0
+
+    until current_node.nil?
+      return index if value == current_node.value
+
+      current_node = current_node.next
+      index += 1
+    end
+
+    nil
+  end
 end
 
 list = LinkedList.new
-# list.append(10)
-# list.append(20)
-# list.append(30)
+list.append(10)
+list.append(20)
+list.append(30)
 
-p list.contains?(1)
-p list.contains?(10)
-p list.contains?(20)
-p list.contains?(30)
+puts list.find(10)
+puts list.find(42)
+puts list.find(20)
+puts list.find(30)
 
 puts list
