@@ -20,6 +20,6 @@ This is the [linked lists](https://www.theodinproject.com/paths/full-stack-ruby-
 | #find(value) | Returns the index of the node containing value, or nil if not found.    |
 | #to_s | Represent your LinkedList objects as strings, so you can print them out and preview them in the console.    |
 | #insert_at(value, index) | Inserts a new node with the provided value at the given index.    |
-<!-- | #remove_at(index) | Removes the node at the given index.   | -->
+| #remove_at(index) | Removes the node at the given index.   |
 
 -Fredymarb
