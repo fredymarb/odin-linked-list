@@ -8,4 +8,7 @@ list.append("hamster")
 list.append("snake")
 list.append("turtle")
 
+list.insert_at("Marko!!", 6)
+p list.size
+
 puts list
