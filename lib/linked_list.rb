@@ -45,23 +45,39 @@ class LinkedList
 
   # returns the first node in the list
   def head
+    return nil if @head.nil?
+
     @head.value
   end
 
   # returns the last node of the list
   def tail
+    return nil if @head.nil?
+
+    current_node = @head
+    current_node = current_node.next until current_node.next.nil?
+    current_node.value
+  end
+
+  # returns the node at the given index
+  def at(index)
+    raise StandardError, "List is empty" if size.zero?
+    raise IndexError, "Index: #{index} is out of range" if index.negative? || index > size - 1
+
     current_node = @head
 
-    current_node = current_node.next until current_node.next.nil?
+    index.times do
+      current_node = current_node.next
+    end
+
     current_node.value
   end
 end
 
 list = LinkedList.new
-puts list
-list.append(10)
-list.append(20)
-list.append(30)
+# list.append(10)
+# list.append(20)
+# list.append(30)
 
 puts list
-puts list.tail
+puts list.at(0)
