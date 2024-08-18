@@ -19,7 +19,7 @@ This is the [linked lists](https://www.theodinproject.com/paths/full-stack-ruby-
 | #contains?(value) | Returns true if the passed in value is in the list and otherwise returns false.     |
 | #find(value) | Returns the index of the node containing value, or nil if not found.    |
 | #to_s | Represent your LinkedList objects as strings, so you can print them out and preview them in the console.    |
-<!-- | #insert_at(value, index) | Inserts a new node with the provided value at the given index.    |
-| #remove_at(index) | Removes the node at the given index.   | -->
+| #insert_at(value, index) | Inserts a new node with the provided value at the given index.    |
+<!-- | #remove_at(index) | Removes the node at the given index.   | -->
 
 -Fredymarb
