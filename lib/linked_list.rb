@@ -1,6 +1,8 @@
 require_relative "node"
 
 class LinkedList
+  attr_reader :size
+
   def initialize
     @head = nil
     @size = 0
@@ -18,6 +20,7 @@ class LinkedList
     string << "nil"
   end
 
+  # add node to the end of the list
   def append(value)
     new_node = Node.new(value)
     current_node = @head
@@ -29,6 +32,7 @@ class LinkedList
     current_node.next = new_node
   end
 
+  # add node to the start of the list
   def prepend(value)
     new_node = Node.new(value)
 
