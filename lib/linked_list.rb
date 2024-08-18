@@ -14,7 +14,7 @@ class LinkedList
     current_node = @head
 
     until current_node.nil?
-      string << "#{current_node.value} -> "
+      string << "( #{current_node.value} ) -> "
       current_node = current_node.next
     end
 
@@ -89,6 +89,21 @@ class LinkedList
     @size -= 1
     nil
   end
+
+  # returns true if the passed in value is in
+  # the list otherwise returns false.
+  def contains?(value)
+    return false if @head.nil?
+
+    current_node = @head
+    until current_node.nil?
+      return true if current_node.value == value
+
+      current_node = current_node.next
+    end
+
+    false
+  end
 end
 
 list = LinkedList.new
@@ -96,6 +111,9 @@ list.append(10)
 list.append(20)
 list.append(30)
 
-list.pop
+p list.contains?(1)
+p list.contains?(10)
+p list.contains?(20)
+p list.contains?(30)
 
 puts list
