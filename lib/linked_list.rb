@@ -119,15 +119,3 @@ class LinkedList
     nil
   end
 end
-
-list = LinkedList.new
-list.append(10)
-list.append(20)
-list.append(30)
-
-puts list.find(10)
-puts list.find(42)
-puts list.find(20)
-puts list.find(30)
-
-puts list
